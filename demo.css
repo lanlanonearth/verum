@@ -1,0 +1,59 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.global-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #FFFFF;
+}
+    .demo-container {
+      transform: translateZ(0);
+      background-image: url("gradient.gif");
+      background-position: center;
+      /* background: linear-gradient(to right, #f32170, #ffeb07, #2196f3, #ff00eb); */
+      background-size: 100%;
+      -webkit-clip-path: url(#myClip);
+      clip-path: url(#myClip);
+      width: 53.5vmin;
+      height: 10vmin;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      /* -webkit-animation-name: gradient-float;
+      animation-name: gradient-float;
+    stroke-dashoffset: 0.1%;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; */
+    }
+
+@-webkit-keyframes gradient-float {
+    0%{background-position:10% 0%}
+    50%{background-position:100% 100%}
+    100%{background-position:10% 0%}
+}
+
+@keyframes gradient-float {
+    0%{
+      background-position:10% 0%
+    }
+    50%{background-position:100% 100%}
+    100%{
+      background-position:10% 0%
+    }
+}
